@@ -19,27 +19,36 @@ Additional informations:
   * Restrictions can be added while creating a code snippet. Zero or a negative number in the input is considered as no limitation.
   * If any restriction is imposed on the element, it will not be displayed in the *latest* view (it's only available through UUID).
 
-
+_________________________________________________
 
 **Working through web interface**
 
+
 *Latest posts*
-Got to http://localhost:8889/code/latest:
+
+Go to http://localhost:8889/code/latest:
 ![alt text](https://github.com/AlicjaZab/CodeSharingPlatform/blob/main/images/latest.PNG?raw=true)
-and simply you will see 10 latest posts (or less, if there is less of them in the database)
+and simply you will see 10 latest posts (or less, if there is less of them in the database).
+
 
 *Specified code snippet*
-Got to http://localhost:8889/code/[UUID]:
+
+Go to http://localhost:8889/code/[UUID]:
 ![alt text](https://github.com/AlicjaZab/CodeSharingPlatform/blob/main/images/uuid.PNG?raw=true)
 and there is post with given UUID (if it exists, of course). As you can see, if there are any restrictions applied, they are displayed above the piece of code.
 
+
 *New snippet*
-Got to http://localhost:8889/code/new:
+
+Go to http://localhost:8889/code/new:
 ![alt text](https://github.com/AlicjaZab/CodeSharingPlatform/blob/main/images/new.PNG?raw=true)
 and there you can write your code and add restrictions if you want. After pressing the "Submit" button, there will be displayed a pop-us message with UUID of your post (wchich means the code snippet was succcesfully saved).
 
 
+_________________________________________________
+
 **Working through API**
+
 
 *Latest posts*
 
@@ -62,6 +71,7 @@ Send GET request to /api/code/latest, and you will receive a response with JSON 
 }
 ```
 
+
 *Specified code snippet*
 
 Send GET request to /api/code/[UUID], and you will receive a response with JSON containing snippets with given UUID and some informations about it -code (content of post), date of posting it, time restriction (in seconds) and views restriction ('0' means there is no restriction).
@@ -75,7 +85,9 @@ Send GET request to /api/code/[UUID], and you will receive a response with JSON 
 }
 ```
 
+
 *New snippet*
+
 Send POST request to /api/code/new with a JSON containg code snippet, time restriction and views restriction:
 ```
 {
