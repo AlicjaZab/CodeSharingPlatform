@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CodeSharingPlatformTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-07T13:31:36" hostname="ALCIALAPTOP" time="18.301">
+  <properties/>
+  <testcase name="start" classname="CodeSharingPlatformTest" time="18.301"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2021-01-07 14:31:36.922  INFO 2100 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform on ALCIALAPTOP with PID 2100 (started by Alicja in C:\Users\Alicja\Poważne Projekty\Code Sharing Platform\Code Sharing Platform\task)
+2021-01-07 14:31:36.927  INFO 2100 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
+2021-01-07 14:31:38.100  INFO 2100 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-01-07 14:31:38.177  INFO 2100 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63ms. Found 1 JPA repository interfaces.
+2021-01-07 14:31:38.966  INFO 2100 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2021-01-07 14:31:38.980  INFO 2100 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-07 14:31:38.980  INFO 2100 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-07 14:31:39.152  INFO 2100 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-07 14:31:39.152  INFO 2100 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2159 ms
+2021-01-07 14:31:39.325  INFO 2100 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-07 14:31:39.566  INFO 2100 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-07 14:31:39.577  INFO 2100 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../snippets'
+2021-01-07 14:31:39.819  INFO 2100 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 14:31:39.888  INFO 2100 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-07 14:31:39.923  WARN 2100 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-07 14:31:39.985  INFO 2100 --- [         task-1] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.20.Final
+2021-01-07 14:31:40.260  INFO 2100 --- [         task-1] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2021-01-07 14:31:40.491  INFO 2100 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: create table code_entity (id varchar(255) not null, code varchar(255), date timestamp, exp_date timestamp, restricted_views boolean not null, time bigint not null, views bigint not null, primary key (id))
+2021-01-07 14:31:41.455  INFO 2100 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-07 14:31:41.466  INFO 2100 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-07 14:31:41.691  INFO 2100 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-01-07 14:31:41.757  INFO 2100 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2021-01-07 14:31:41.758  INFO 2100 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-01-07 14:31:42.120  INFO 2100 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-01-07 14:31:42.134  INFO 2100 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 5.704 seconds (JVM running for 7.704)
+2021-01-07 14:31:42.544  INFO 2100 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-07 14:31:42.544  INFO 2100 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-07 14:31:42.554  INFO 2100 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+?[1;31m
+Start test 2?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 3?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 4?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 5?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 6?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 7?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 8?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 9?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 10?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 11?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 12?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 13?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 14?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 15?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 16?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 17?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 18?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 19?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 20?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 21?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 22?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 23?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 24?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 25?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 26?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 27?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 28?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 29?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 30?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 31?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 32?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 33?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 34?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 35?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 36?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 37?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 38?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 39?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 40?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 41?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 42?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 43?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 44?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 45?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 46?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 47?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 48?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 49?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 50?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 51?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 52?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 53?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 54?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 55?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 56?[0m
+2021-01-07 14:31:45.180  INFO 2100 --- [       Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-07 14:31:45.186  INFO 2100 --- [       Thread-6] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-07 14:31:45.191  INFO 2100 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-07 14:31:45.293  INFO 2100 --- [       Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2021-01-07 14:31:45.438  INFO 2100 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform on ALCIALAPTOP with PID 2100 (started by Alicja in C:\Users\Alicja\Poważne Projekty\Code Sharing Platform\Code Sharing Platform\task)
+2021-01-07 14:31:45.439  INFO 2100 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
+2021-01-07 14:31:45.796  INFO 2100 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-01-07 14:31:45.805  INFO 2100 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 1 JPA repository interfaces.
+2021-01-07 14:31:45.927  INFO 2100 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2021-01-07 14:31:45.928  INFO 2100 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-07 14:31:45.928  INFO 2100 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-07 14:31:45.972  INFO 2100 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-07 14:31:45.973  INFO 2100 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 523 ms
+2021-01-07 14:31:46.030  INFO 2100 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2021-01-07 14:31:46.040  INFO 2100 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2021-01-07 14:31:46.041  INFO 2100 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../snippets'
+2021-01-07 14:31:46.096  INFO 2100 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 14:31:46.101  INFO 2100 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-07 14:31:46.110  INFO 2100 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-07 14:31:46.128  WARN 2100 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-07 14:31:46.186  INFO 2100 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-07 14:31:46.187  INFO 2100 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-07 14:31:46.364  INFO 2100 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-01-07 14:31:46.386  INFO 2100 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2021-01-07 14:31:46.387  INFO 2100 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-01-07 14:31:46.430  INFO 2100 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-01-07 14:31:46.438  INFO 2100 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 1.089 seconds (JVM running for 12.007)
+?[1;31m
+Start test 57?[0m
+2021-01-07 14:31:46.444  INFO 2100 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-07 14:31:46.444  INFO 2100 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-07 14:31:46.448  INFO 2100 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 58?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 59?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 60?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 61?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 62?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 63?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 64?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 65?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 66?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 67?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 68?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 69?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 70?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 71?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 72?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 73?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 74?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 75?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 76?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 77?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 78?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 79?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 80?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 81?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 82?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 83?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 84?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 85?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 86?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 87?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 88?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 89?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 90?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 91?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 92?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 93?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 94?[0m
+Hibernate: select codeentity0_.id as id1_0_0_, codeentity0_.code as code2_0_0_, codeentity0_.date as date3_0_0_, codeentity0_.exp_date as exp_date4_0_0_, codeentity0_.restricted_views as restrict5_0_0_, codeentity0_.time as time6_0_0_, codeentity0_.views as views7_0_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: insert into code_entity (code, date, exp_date, restricted_views, time, views, id) values (?, ?, ?, ?, ?, ?, ?)
+?[1;31m
+Start test 95?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 96?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 97?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 98?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 99?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 100?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 101?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 102?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 103?[0m
+2021-01-07 14:31:53.116  INFO 2100 --- [       Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-07 14:31:53.118  INFO 2100 --- [       Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-07 14:31:53.120  INFO 2100 --- [       Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2021-01-07 14:31:53.159  INFO 2100 --- [       Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.3.3.RELEASE)
+
+2021-01-07 14:31:53.252  INFO 2100 --- [    Test worker] platform.CodeSharingPlatform             : Starting CodeSharingPlatform on ALCIALAPTOP with PID 2100 (started by Alicja in C:\Users\Alicja\Poważne Projekty\Code Sharing Platform\Code Sharing Platform\task)
+2021-01-07 14:31:53.253  INFO 2100 --- [    Test worker] platform.CodeSharingPlatform             : No active profile set, falling back to default profiles: default
+2021-01-07 14:31:53.588  INFO 2100 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFERRED mode.
+2021-01-07 14:31:53.596  INFO 2100 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 1 JPA repository interfaces.
+2021-01-07 14:31:53.697  INFO 2100 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8889 (http)
+2021-01-07 14:31:53.699  INFO 2100 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-07 14:31:53.699  INFO 2100 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.37]
+2021-01-07 14:31:53.750  INFO 2100 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-07 14:31:53.750  INFO 2100 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 492 ms
+2021-01-07 14:31:53.803  INFO 2100 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2021-01-07 14:31:53.814  INFO 2100 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2021-01-07 14:31:53.814  INFO 2100 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:../snippets'
+2021-01-07 14:31:53.865  INFO 2100 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-07 14:31:53.869  INFO 2100 --- [         task-1] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-07 14:31:53.883  INFO 2100 --- [         task-1] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-07 14:31:53.900  WARN 2100 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-07 14:31:53.952  INFO 2100 --- [         task-1] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-07 14:31:53.952  INFO 2100 --- [         task-1] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-07 14:31:54.125  INFO 2100 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-01-07 14:31:54.141  INFO 2100 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8889 (http) with context path ''
+2021-01-07 14:31:54.142  INFO 2100 --- [    Test worker] DeferredRepositoryInitializationListener : Triggering deferred initialization of Spring Data repositories…
+2021-01-07 14:31:54.184  INFO 2100 --- [    Test worker] DeferredRepositoryInitializationListener : Spring Data repositories initialized!
+2021-01-07 14:31:54.192  INFO 2100 --- [    Test worker] platform.CodeSharingPlatform             : Started CodeSharingPlatform in 0.993 seconds (JVM running for 19.761)
+?[1;31m
+Start test 104?[0m
+?[1;31m
+Start test 105?[0m
+2021-01-07 14:31:54.198  INFO 2100 --- [nio-8889-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-07 14:31:54.198  INFO 2100 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-07 14:31:54.201  INFO 2100 --- [nio-8889-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: update code_entity set code=?, date=?, exp_date=?, restricted_views=?, time=?, views=? where id=?
+?[1;31m
+Start test 106?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: update code_entity set code=?, date=?, exp_date=?, restricted_views=?, time=?, views=? where id=?
+?[1;31m
+Start test 107?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: update code_entity set code=?, date=?, exp_date=?, restricted_views=?, time=?, views=? where id=?
+?[1;31m
+Start test 108?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: update code_entity set code=?, date=?, exp_date=?, restricted_views=?, time=?, views=? where id=?
+?[1;31m
+Start test 109?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: delete from code_entity where id=?
+?[1;31m
+Start test 110?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 111?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 112?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+?[1;31m
+Start test 113?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 114?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.restricted_views=? and codeentity0_.time=?
+?[1;31m
+Start test 115?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: update code_entity set code=?, date=?, exp_date=?, restricted_views=?, time=?, views=? where id=?
+?[1;31m
+Start test 116?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: update code_entity set code=?, date=?, exp_date=?, restricted_views=?, time=?, views=? where id=?
+?[1;31m
+Start test 117?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: update code_entity set code=?, date=?, exp_date=?, restricted_views=?, time=?, views=? where id=?
+?[1;31m
+Start test 118?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+Hibernate: delete from code_entity where id=?
+?[1;31m
+Start test 119?[0m
+Hibernate: select codeentity0_.id as id1_0_, codeentity0_.code as code2_0_, codeentity0_.date as date3_0_, codeentity0_.exp_date as exp_date4_0_, codeentity0_.restricted_views as restrict5_0_, codeentity0_.time as time6_0_, codeentity0_.views as views7_0_ from code_entity codeentity0_ where codeentity0_.id=?
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

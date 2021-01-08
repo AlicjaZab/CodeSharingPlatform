@@ -1,0 +1,67 @@
+body {
+   background-color: orange;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    font-size: 40px;
+    align-items: center;
+    margin-bottom: 5px
+}
+
+hr {
+     border-top: 1px dashed orange;
+     border-bottom: 0px
+}
+
+.page_title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    font-size: 32px;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 60px;
+}
+
+button {
+    color: white;
+    background-color: green;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+    border: none;
+    margin-top: 30px;
+}
+
+button:hover{
+    opacity: 1;
+}
+
+textarea {
+    resize: none;
+    outline: orange;
+    padding: 10px;
+    margin: 30px 0px;
+    border-radius: 8px;
+}
+
+.content  {
+    background-color: black;
+    margin: 0px 300px;
+    padding: 30px 100px;
+    border-radius: 8px;
+}
+
+.text_style {
+    font-family: Arial, Helvetica, sans-serif;
+    color: orange;
+    font-size: 20px;
+}
+
+.code_container {
+    margin-bottom: 100px
+}
