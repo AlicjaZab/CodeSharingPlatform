@@ -2,7 +2,7 @@
 
 Simple Code Sharing Platform, made under the supervision of JetBrains Academy (https://hyperskill.org/projects/130?track=1).
 
-Key Words : JPA, H2 database, REST API, Spring framework (Boot, Security, Web, MVC), Gradle, JSON, HTML, CSS
+Key Words : JPA, H2 database, REST API, Spring Boot, Gradle, JSON, HTML, CSS
 
 
 The Code Sharing Platform supports following operations:
